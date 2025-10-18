@@ -1,0 +1,20 @@
+<mat-drawer-container>
+    <mat-drawer class="sidenav" [opened]="!isMobile()" #drawer [mode]="isMobile() ? 'over' : 'side'">
+        <p class="title">Электронный учебник</p>
+        <div>
+            <ul class="menu-list">
+                @for (item of categories; track $index) {
+                    <a href="/{{ $index }}">
+                        <li matRipple matRippleColor="rgba(255,255,255,0.3)" class="menu-item">
+                            <mat-icon>arrow_forward</mat-icon>{{ item.name }}
+                        </li>
+                    </a>
+                }
+            </ul>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <ng-content></ng-content>
+      <button class="toggle-button" mat-fab (click)="drawer.toggle()"><mat-icon>menu</mat-icon></button>
+    </mat-drawer-content>
+</mat-drawer-container>

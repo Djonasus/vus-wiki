@@ -1,0 +1,11 @@
+@if (book) {
+    <ngx-extended-pdf-viewer
+    [src]="book!.path"
+    useBrowserLocale=true
+    [showDownloadButton]="false"
+    [showOpenFileButton]="false"
+    [showPresentationModeButton]="true"
+    [activeSidebarView]='1'
+  >
+  </ngx-extended-pdf-viewer>
+}

@@ -1,0 +1,25 @@
+.title-box {
+    padding: 0;
+    margin: 0;
+
+    p, h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    margin: 15px;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.books-container {
+    margin: 30px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    align-items: center;
+    gap: 20px;
+}

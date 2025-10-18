@@ -1,0 +1,14 @@
+<div class="title-box">
+    <p>Список материалов</p>
+    <h1 class="title">{{  categories[currentCategory].name }}</h1>
+    <div class="books-container">
+        @if (categories[currentCategory] && categories[currentCategory].books.length === 0) {
+            <p class="empty">Нет материалов в категории</p>
+        }
+        @if (categories[currentCategory]) {
+            @for (item of categories[currentCategory].books; track $index) {
+                <app-book [pdfUrl]="item.path" [categoryId]="currentCategory" [bookId]="$index" [book]="item"></app-book>
+            }
+        }
+    </div>
+</div>

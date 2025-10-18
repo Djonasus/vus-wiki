@@ -1,0 +1,6 @@
+<a href="/{{ categoryId }}/{{ bookId }}" class="book">
+    <img class="thumb" *ngIf="thumbDataUrl" [src]="thumbDataUrl" alt="PDF preview" />
+    <div class="thumb loading" *ngIf="!thumbDataUrl"><mat-spinner></mat-spinner></div>
+    <div class="title">{{ book.title }}</div>
+    <div class="author">{{ book.author }}</div>
+</a>
